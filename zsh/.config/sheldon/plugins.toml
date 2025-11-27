@@ -1,0 +1,80 @@
+# `sheldon` configuration file
+# ----------------------------
+#
+# You can modify this file directly or you can use one of the following
+# `sheldon` commands which are provided to assist in editing the config file:
+#
+# - `sheldon add` to add a new plugin to the config file
+# - `sheldon edit` to open up the config file in the default editor
+# - `sheldon remove` to remove a plugin from the config file
+#
+# See the documentation for more https://github.com/rossmacarthur/sheldon#readme
+
+shell = "zsh"
+
+[templates]
+defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}{{ hooks?.post | nl }}"
+
+[plugins.zsh-defer]
+github = "romkatv/zsh-defer"
+
+[plugins.zsh-completions]
+github = "zsh-users/zsh-completions"
+use = ["{{ name }}.plugin.zsh"]
+
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+use = ["{{ name }}.plugin.zsh"]
+
+[plugins.fast-syntax-highlighting]
+github = "zdharma-continuum/fast-syntax-highlighting"
+use = ["{{ name }}.plugin.zsh"]
+apply = ["defer"]
+
+[plugins.zsh-autosuggestions]
+github = "zsh-users/zsh-autosuggestions"
+use = ["{{ name }}.zsh"]
+apply = ["defer"]
+
+[plugins.fzf]
+github = "junegunn/fzf"
+use = ["shell/completion.zsh", "shell/key-bindings.zsh"]
+apply = ["defer"]
+
+[plugins.fzf-sdh-plugun]
+github = "joshskidmore/zsh-fzf-history-search"
+apply = ["defer"]
+
+[plugins.zsh-autopair]
+github = "hlissner/zsh-autopair"
+apply = ["defer"]
+
+[plugins.zsh-auto-notify]
+github = "MichaelAquilina/zsh-auto-notify"
+apply = ["defer"]
+
+[plugins.sudo]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/sudo"
+apply = ["defer"]
+
+[plugins.extract]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/extract"
+apply = ["defer"]
+
+[plugins.safe-paste]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/safe-paste"
+apply = ["defer"]
+
+[plugins.copybuffer]
+github = "ohmyzsh/ohmyzsh"
+dir = "plugins/copybuffer"
+apply = ["defer"]
+
+[plugins.path-ethic]
+local = "~/.config/sheldon/custom-plug/path-ethic"
+apply = ["defer"]
+
+

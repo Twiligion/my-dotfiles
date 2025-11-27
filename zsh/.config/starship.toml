@@ -1,0 +1,57 @@
+
+format = "$username@$hostname $directory$git_branch$character"
+
+right_format = "$status $cmd_duration $time"
+
+add_newline = false
+
+[username]
+show_always = true
+style_user = "red"
+format = "[$user]($style)"
+
+[hostname]
+ssh_only = false
+style = "red"
+format = "[$hostname]($style)"
+
+[directory]
+format = "[$path]($style)"
+style = "none"
+home_symbol = "~"
+truncate_to_repo = false
+truncation_length = 0
+fish_style_pwd_dir_length = 1
+use_os_path_sep = true
+
+[git_branch]
+format = " [$branch]($style)"
+style = "yellow"
+
+[git_status]
+disabled = true
+
+[character]
+success_symbol = "[ >](bold green)"
+error_symbol = "[ >](bold red)"
+
+[line_break]
+disabled = true
+
+[status]
+format = "[$status]($style)"
+style = "red"
+disabled = false
+
+[cmd_duration]
+min_time = 0
+format = "[$duration]($style)"
+style = "none"
+show_milliseconds = false
+
+[time]
+disabled = false
+time_format = "%T"
+format = "[$time]($style)"
+style = "none"
+
