@@ -46,8 +46,8 @@ eval "$(starship init zsh)"
 # =================================
 #wal -R >> /dev/null
 #fastfetch
-hyfetch
-dysk
+#hyfetch
+#dysk
 
 # =================================
 # 8. BINDS

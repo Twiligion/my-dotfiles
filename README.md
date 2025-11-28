@@ -6,7 +6,7 @@
 
 
 * **Kakoune**
-* -
+* Lsp: kak-lsp
 
 
 * **Kitty**

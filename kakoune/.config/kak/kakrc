@@ -13,6 +13,7 @@ bundle fzf.kak https://github.com/andreyorst/fzf.kak
 bundle kakoune-sudo-write https://github.com/occivink/kakoune-sudo-write
 bundle kakoune-palette https://github.com/delapouite/kakoune-palette
 
+
 bundle byline.kak https://github.com/evanrelf/byline.kak %{
     require-module "byline"
 }
@@ -61,6 +62,10 @@ bundle langmap.kak https://github.com/andreyorst/langmap.kak
     map -docstring "toggle layout" global prompt '<c-\>' '<a-;>:toggle-langmap prompt<ret>'
 
 
+eval %sh{kak-lsp}
+hook global WinSetOption filetype=(rust|python|c|cpp|markdown|javascript|typescript|ruby) %{
+    lsp-enable-window
+}
 
 
 
