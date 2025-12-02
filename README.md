@@ -6,6 +6,11 @@
 * Other: fzf, zoxide
 
 
+* **Fish**
+* Prompt: starship
+* Other: fzf, zoxide
+
+
 * **Kakoune**
 * Lsp: kak-lsp
 
