@@ -12,4 +12,10 @@
 
 * **Kitty**
 * Fonts: IBM Plex Mono
-* Theme: pywal
+* Theme: pywal/wallust
+
+
+* **Alacritty**
+* Fonts: IBM Plex Mono
+* Theme: wallust
+* Multiplexer: zellij

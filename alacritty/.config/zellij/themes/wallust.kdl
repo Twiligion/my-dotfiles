@@ -1,0 +1,19 @@
+// Template for Zellij
+// Place this in ~/.config/wallust/templates/zellij.kdl
+
+themes {
+    wallust-theme {
+        fg "#F2F7FC"
+        bg "#020006"
+        black "#020006"
+        red "#0C4D97"
+        green "#9C6017"
+        yellow "#B90F28"
+        blue "#23D2D2"
+        magenta "#194EF1"
+        cyan "#F5902E"
+        white "#E4EBF2"
+        orange "#B90F28" // Используем яркий желтый/оранжевый
+    }
+}
+
